@@ -174,7 +174,7 @@ interface Service {
 }
 const ServiceCard = ({ service }: {service: Service}) => {
     return (
-        <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 ">
+        <div className="bg-[#FFF] rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 " id={"services"}>
             <div className="grid h-full">
                 {/* Image Section */}
                 <div className="relative h-64 md:h-full">
@@ -227,9 +227,9 @@ const ServiceCard = ({ service }: {service: Service}) => {
                         )}
                     </div>
 
-                    <button className="w-full bg-stone-600 text-white py-3 rounded hover:bg-stone-700 transition-colors font-medium">
-                        Select
-                    </button>
+                    {/*<button className="w-full bg-stone-600 text-white py-3 rounded hover:bg-stone-700 transition-colors font-medium">*/}
+                    {/*    Select*/}
+                    {/*</button>*/}
                 </div>
             </div>
         </div>
@@ -238,7 +238,7 @@ const ServiceCard = ({ service }: {service: Service}) => {
 
 const ServicesSection = () => {
     return (
-        <section className="bg-white py-16 px-8">
+        <section className="bg-[radial-gradient(circle_at_center,_#fb923c2a_0%,_#FFF7D6_75%)] py-16 px-8">
             <div className="container mx-auto ">
                 <div className="text-center mb-12">
                     <h2 className="text-5xl font-serif text-gray-900 mb-4">Our Services</h2>

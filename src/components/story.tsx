@@ -2,7 +2,7 @@ import React from 'react';
 
 const StorySection = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center px-8 py-16">
+        <section className="min-h-screen flex items-center justify-center px-8 py-16" id={"story"}>
             <div className="container mx-auto max-w-7xl">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}

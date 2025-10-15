@@ -73,93 +73,122 @@ const ContactForm = () => {
             setCurrentTestimonial(prev => (prev + 1) % testimonials.length)
         }, 4000)
         return () => clearInterval(intv)
-    })
+    },[])
     return (
-        <section className="py-20 px-8 bg-gradient-to-br from-gray-50 to-white">
+        <section className="py-20 px-8 bg-gradient-to-br bg-[radial-gradient(circle_at_center,_#fb923c2a_0%,_#FFF7D6_75%)]" id={"contact"}>
             <div className="container mx-auto max-w-7xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
                     <div className="space-y-8">
                         <div>
-                            <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
-                                <Sparkles className="w-4 h-4" />
+                            <div
+                                className="inline-flex items-center gap-2 bg-amber-100 text-amber-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                                <Sparkles className="w-4 h-4"/>
                                 Free Consultation
                             </div>
                             <h2 className="text-5xl md:text-6xl font-serif text-gray-900 mb-4 leading-tight">
                                 Start Your Skin Journey Today
                             </h2>
                             <p className="text-xl text-gray-600 leading-relaxed">
-                                Schedule a complimentary consultation with our expert estheticians and discover your personalized skincare plan.
+                                Schedule a complimentary consultation with our expert estheticians and discover your
+                                personalized skincare plan.
                             </p>
                         </div>
 
                         {/* Benefits */}
                         <div className="space-y-4">
-                            <div className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                                <div className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Clock className="w-6 h-6 text-amber-600" />
+                            <div
+                                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                                <div
+                                    className="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <Clock className="w-6 h-6 text-amber-600"/>
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900 mb-1">Quick Response Time</h3>
-                                    <p className="text-gray-600 text-sm">We'll contact you within 24 hours to schedule your appointment</p>
+                                    <p className="text-gray-600 text-sm">We'll contact you within 24 hours to schedule
+                                        your appointment</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Award className="w-6 h-6 text-orange-600" />
+                            <div
+                                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                                <div
+                                    className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <Award className="w-6 h-6 text-orange-600"/>
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900 mb-1">Expert Estheticians</h3>
-                                    <p className="text-gray-600 text-sm">15+ years of experience in personalized skincare treatments</p>
+                                    <p className="text-gray-600 text-sm">15+ years of experience in personalized
+                                        skincare treatments</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
-                                <div className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <Sparkles className="w-6 h-6 text-yellow-600" />
+                            <div
+                                className="flex items-start gap-4 bg-white p-5 rounded-xl shadow-sm border border-gray-100">
+                                <div
+                                    className="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <Sparkles className="w-6 h-6 text-yellow-600"/>
                                 </div>
                                 <div>
                                     <h3 className="font-bold text-gray-900 mb-1">Customized Approach</h3>
-                                    <p className="text-gray-600 text-sm">Every treatment plan is tailored to your unique skin needs</p>
+                                    <p className="text-gray-600 text-sm">Every treatment plan is tailored to your unique
+                                        skin needs</p>
                                 </div>
                             </div>
                         </div>
+                        <div className="relative rounded-3xl p-[2px] bg-gradient-to-br from-[#fbbf24]/60 to-[#f97316]/60 shadow-lg">
+                            <div className="overflow-hidden rounded-3xl">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.3739473748883!2d-75.0990889365035!3d40.211684076262635!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c6af294c9584b7%3A0xae59f44488c1126f!2sBl%C3%BCm%20skin%20therapy%20Studio%20%26%20Spa!5e0!3m2!1sen!2sus!4v1760552384460!5m2!1sen!2sus"
+                                    width="100%"
+                                    height="250"
+                                    loading="lazy"
+                                    allowFullScreen
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                    className="w-full h-[250px] rounded-3xl"
+                                ></iframe>
+                            </div>
+                        </div>
+
 
                         {/* Testimonial */}
-                        <div className="relative h-48 flex items-center justify-center">
-                            <AnimatePresence mode="wait">
-                                {testimonials[currentTestimonial] && (
-                                    <motion.div
-                                        key={currentTestimonial}
-                                        initial={{ opacity: 0, x:-20 }}
-                                        animate={{ opacity: 1, x: 0 }}
-                                        exit={{ opacity: 0, x: 20 }}
-                                        transition={{ duration: 0.4 }}
-                                        className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl border border-amber-200"
-                                    >
-                                        <div className="flex gap-1 mb-3">
-                                            {[...Array(5)].map((_, i) => (
-                                                <span key={i} className="text-amber-400 text-xl">★</span>
-                                            ))}
-                                        </div>
-                                        <p className="text-gray-700 italic mb-3 text-center">
-                                            {testimonials[currentTestimonial].text}
-                                        </p>
-                                        <p className="text-sm font-medium text-gray-900">{testimonials[currentTestimonial].author} Verified Client</p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </div>
+                        {/*<div className="relative h-48 flex items-center justify-center">*/}
+                        {/*    <AnimatePresence mode="wait">*/}
+                        {/*        {testimonials[currentTestimonial] && (*/}
+                        {/*            <motion.div*/}
+                        {/*                key={currentTestimonial}*/}
+                        {/*                initial={{opacity: 0, x: -20}}*/}
+                        {/*                animate={{opacity: 1, x: 0}}*/}
+                        {/*                exit={{opacity: 0, x: 20}}*/}
+                        {/*                transition={{duration: 0.4}}*/}
+                        {/*                className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-amber-50 to-orange-50 p-6 rounded-2xl border border-amber-200"*/}
+                        {/*            >*/}
+                        {/*                <div className="flex gap-1 mb-3">*/}
+                        {/*                    {[...Array(5)].map((_, i) => (*/}
+                        {/*                        <span key={i} className="text-amber-400 text-xl">★</span>*/}
+                        {/*                    ))}*/}
+                        {/*                </div>*/}
+                        {/*                <p className="text-gray-700 italic mb-3 text-center">*/}
+                        {/*                    {testimonials[currentTestimonial].text}*/}
+                        {/*                </p>*/}
+                        {/*                <p className="text-sm font-medium text-gray-900">{testimonials[currentTestimonial].author} Verified*/}
+                        {/*                    Client</p>*/}
+                        {/*            </motion.div>*/}
+                        {/*        )}*/}
+                        {/*    </AnimatePresence>*/}
+                        {/*</div>*/}
 
 
                     </div>
 
                     {/* Right Form */}
-                    <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden">
+                    <div
+                        className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-100 relative overflow-hidden h-full">
                         {/* Decorative Elements */}
-                        <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full blur-3xl opacity-30 -z-10"></div>
-                        <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-yellow-100 to-amber-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+                        <div
+                            className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-amber-100 to-orange-100 rounded-full blur-3xl opacity-30 -z-10"></div>
+                        <div
+                            className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-yellow-100 to-amber-100 rounded-full blur-3xl opacity-30 -z-10"></div>
 
                         <div className="mb-6">
                             <h3 className="text-3xl font-serif text-gray-900 mb-2">
@@ -278,10 +307,10 @@ const ContactForm = () => {
                                     </div>
                                     <textarea
                                         name="message"
-                                        rows={4}
+                                        rows={11}
                                         value={formData.message}
                                         onChange={handleChange}
-                                        className="block w-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-gray-50 focus:bg-white transition-all resize-none text-gray-900 placeholder-gray-400"
+                                        className="block w-full h-full pl-12 pr-4 py-3.5 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-amber-500 focus:border-amber-500 bg-gray-50 focus:bg-white transition-all resize-none text-gray-900 placeholder-gray-400"
                                         placeholder="Share your skin concerns, goals, or any questions you have..."
                                     />
                                 </div>

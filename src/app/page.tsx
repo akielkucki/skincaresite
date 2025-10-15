@@ -13,7 +13,7 @@ const Background = () => {
             className="w-full absolute top-0 left-0 -z-10"
             style={{
                 height: '200vh',
-                background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #ffffff 100%)',
+                background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #FFF7D6 100%)',
             }}
         ></div>
     )
@@ -26,6 +26,8 @@ export default function Home() {
           <Hero/>
           <StorySection/>
           <Services/>
+
+
           <Cta/>
           <Contact/>
 

@@ -11,7 +11,7 @@ const Hero = () => {
     const {chatOpen, setChatOpen} = useStore();
     return (
         <>
-        <section className="relative min-h-screen overflow-hidden">
+        <section className="relative min-h-screen overflow-hidden" id={"home"}>
             <Navbar />
 
             <div className="container mx-auto px-8 py-16">
