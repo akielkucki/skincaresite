@@ -1,15 +1,16 @@
 "use client"
 import React from 'react';
 import Navbar from "@/components/navbar";
-import { motion } from "motion/react";
-import SlidingBrands from "@/components/slidingtext";
+import {motion} from "motion/react";
 import {Marquee} from "@/components/ui/marquee";
-
+import {useStore} from "@/lib/store";
 
 
 const Hero = () => {
     const [lastFramePosition, setLastFramePosition] = React.useState<number>(-300);
+    const {chatOpen, setChatOpen} = useStore();
     return (
+        <>
         <section className="relative min-h-screen overflow-hidden">
             <Navbar />
 
@@ -25,7 +26,9 @@ const Hero = () => {
                         Discover science-backed skincare designed for lasting beauty.
                     </p>
 
-                    <button className="bg-yellow-300 text-gray-900 px-8 py-4 rounded font-medium hover:bg-yellow-400 transition-colors inline-flex items-center gap-2 shadow-lg">
+                    <button className="bg-yellow-300 text-gray-900 px-8 py-4 rounded font-medium hover:bg-yellow-400 transition-colors inline-flex items-center gap-2 shadow-lg"
+                    onClick={()=>setChatOpen(true)}
+                    >
                         GET FREE SKIN ASSESSMENT
                         <span>→</span>
                     </button>
@@ -76,29 +79,31 @@ const Hero = () => {
                 </div>
             </div>
 
-            <Marquee reverse={true} className={"text-2xl bg-transparent"} gap={4}>
+            <Marquee reverse={true} className={"text-2xl bg-transparent"} gap={7}>
+
                 <div className="flex items-center gap-3 whitespace-nowrap">
                     <span>✱</span>
                     <span>Visible Results</span>
-                </div>
+                </div>&nbsp;&nbsp;
                 <div className="flex items-center gap-3 whitespace-nowrap">
                     <span>✱</span>
                     <span>Sustainable Ingredients</span>
-                </div>
+                </div>&nbsp;&nbsp;
                 <div className="flex items-center gap-3 whitespace-nowrap">
                     <span>✱</span>
                     <span>Science-Driven Formulas</span>
-                </div>
+                </div>&nbsp;&nbsp;
                 <div className="flex items-center gap-3 whitespace-nowrap">
                     <span>✱</span>
                     <span>Visible Results</span>
-                </div>
+                </div>&nbsp;&nbsp;
                 <div className="flex items-center gap-3 whitespace-nowrap">
                     <span>✱</span>
                     <span>Sustainable Ingredients</span>
-                </div>
+                </div>&nbsp;&nbsp;
             </Marquee>
         </section>
+        </>
     );
 };
 

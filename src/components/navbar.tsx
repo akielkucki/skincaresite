@@ -1,10 +1,11 @@
 import React from "react";
+import {brand} from "@/lib/store";
 
 const Navbar = () => {
     return (
         <nav className="flex items-center justify-between px-8 py-6 bg-transparent">
             <div className="text-3xl font-serif text-gray-900">
-                Mogwarts
+                {brand}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
 
             <div className="flex items-center gap-8">

@@ -1,6 +1,11 @@
 import Hero from "@/components/hero";
 import StorySection from "@/components/story";
 import React, {ReactNode} from "react";
+import Services from "@/components/services";
+import Cta from "@/components/cta";
+import Footer from "@/components/footer";
+import AiChat from "@/components/aichat";
+import Contact from "@/components/contact";
 
 const Background = () => {
     return (
@@ -20,6 +25,13 @@ export default function Home() {
           <Background />
           <Hero/>
           <StorySection/>
+          <Services/>
+          <Cta/>
+          <Contact/>
+
+          <Footer/>
+          <AiChat/>
+
       </>
   );
 }
