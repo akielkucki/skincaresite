@@ -1,7 +1,7 @@
 'use client'
 import React, {useEffect, useState} from 'react';
-import { User, Mail, Phone, MessageSquare, Calendar, Send, Sparkles, Clock, Award } from 'lucide-react';
-import {AnimatePresence, motion} from 'framer-motion';
+import {Award, Calendar, Clock, Mail, MessageSquare, Phone, Send, Sparkles, User} from 'lucide-react';
+
 const ContactForm = () => {
     const [formData, setFormData] = useState({
         name: '',
