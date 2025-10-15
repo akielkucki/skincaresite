@@ -37,8 +37,8 @@ const Hero = () => {
                 <div className="flex items-center justify-center  perspective-1000">
                     <motion.div className="transform -rotate-6 hover:rotate-0 transition-transform duration-300"
                         initial={{x: 300}}
-                                animate={{x: -50}}
-                                onAnimationComplete={() => setLastFramePosition(50)}
+                                animate={{x: 20}}
+                                onAnimationComplete={() => setLastFramePosition(-20)}
                                 transition={{   ease: "easeInOut"}}
                     >
                         <div className="bg-white p-2 rounded-lg shadow-2xl w-64 h-80">

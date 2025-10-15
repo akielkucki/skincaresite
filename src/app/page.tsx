@@ -10,9 +10,9 @@ import Contact from "@/components/contact";
 const Background = () => {
     return (
         <div
-            className="w-full absolute top-0 left-0 -z-10"
+            className="w-full absolute top-0 left-0 -z-10 h-[350vh] md:h-[200vh]"
+
             style={{
-                height: '200vh',
                 background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #FFF7D6 100%)',
             }}
         ></div>

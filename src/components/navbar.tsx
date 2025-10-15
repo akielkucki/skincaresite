@@ -88,7 +88,7 @@ const Navbar = () => {
             {/* Desktop & Mobile Navbar */}
             <nav className={`flex fixed top-0 left-0 right-0 items-center justify-between px-6 md:px-8 py-6 transition-all duration-500 
             ${scrolled ? "bg-[#00000088] backdrop-blur-2xl" : "bg-transparent"}
-             z-50`}>
+             z-50`} onMouseLeave={() => setHoveredLink(null)}>
                 <div className={`text-2xl md:text-3xl font-serif ${scrolled ? "text-[#FFF7D6]" : "text-black"}`}>
                     {brand}
                 </div>
@@ -100,7 +100,7 @@ const Navbar = () => {
                             key={navItem.link}
                             onClick={() => handleNavClick(navItem.link)}
                             onMouseEnter={() => setHoveredLink(navItem.link)}
-                            onMouseLeave={() => setHoveredLink(null)}
+
                             className={`cursor-pointer transition-colors pb-1 relative nav-item ${
                                 scrolled ? "text-[#FFF7D6]" : "text-black"
                             } ${
@@ -114,7 +114,7 @@ const Navbar = () => {
 
                     {/* Single Sliding Bar */}
                     <span
-                        className="absolute bottom-0 h-0.5 bg-gradient-to-r from-amber-500 to-orange-500 transition-all duration-300 ease-out"
+                        className="absolute bottom-[0.25em] h-[0.1rem] bg-gradient-to-r from-gray-800 to-gray-900 transition-all duration-300 ease-out"
                         style={{
                             left: `${getBarPosition(hoveredLink || activeLink)}px`,
                             width: `${getBarWidth(hoveredLink || activeLink)}px`,
@@ -173,7 +173,7 @@ const Navbar = () => {
 
                             {/* Mobile Active Indicator */}
                             {activeLink === navItem.link && (
-                                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-1 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full" />
+                                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-16 h-0.5 bg-gray-900 rounded-full" />
                             )}
                         </div>
                     ))}
