@@ -188,7 +188,7 @@ const ServiceCard = ({ service }: {service: Service}) => {
                         alt={service.title}
                         width={800}
                         height={800}
-                        className="w-full h-[500] object-cover"
+                        className="w-full h-full md:h-[500] object-cover"
                     />
                 </div>
 

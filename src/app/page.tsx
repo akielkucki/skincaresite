@@ -6,6 +6,7 @@ import Cta from "@/components/cta";
 import Footer from "@/components/footer";
 import AiChat from "@/components/aichat";
 import Contact from "@/components/contact";
+import BeforeAfterSection from "@/components/transformations";
 
 const Background = () => {
     return (
@@ -25,6 +26,7 @@ export default function Home() {
           <Background />
           <Hero/>
           <StorySection/>
+          <BeforeAfterSection/>
           <Services/>
 
 
