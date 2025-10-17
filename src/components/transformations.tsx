@@ -1,17 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-const Background = () => {
-    return (
-        <div
-            className="w-full absolute -z-10 h-[calc(100%+100px)]"
 
-            style={{
-                background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #FFF7D6 100%)',
-            }}
-        ></div>
-    )
-}
 const BeforeAfterSection = () => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [sliderPosition, setSliderPosition] = useState(50);
@@ -20,35 +10,27 @@ const BeforeAfterSection = () => {
     const beforeAfterData = [
         {
             id: 1,
-            before: "https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&h=800&fit=crop",
-            after: "https://images.unsplash.com/photo-1598440947619-2c35fc9aa908?w=600&h=800&fit=crop",
-            treatment: "Acne Clear Treatment",
-            duration: "3 Months",
-            description: "Significant reduction in acne and improved skin texture"
+            before: "/cmp1-1.jpg",
+            after: "/cmp1-2.jpg",
+            treatment: "Custom Signature Facial",
+            duration: "2 Months",
+            description: "Improved hydration and even skin tone"
         },
         {
             id: 2,
-            before: "https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&h=800&fit=crop",
-            after: "https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=600&h=800&fit=crop",
+            before: "/cmp2-1.jpg",
+            after: "/cmp2-2.jpg",
             treatment: "DMK Enzyme Therapy",
             duration: "6 Weeks",
             description: "Enhanced skin radiance and reduced fine lines"
         },
         {
             id: 3,
-            before: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?w=600&h=800&fit=crop",
-            after: "https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=600&h=800&fit=crop",
-            treatment: "Custom Signature Facial",
-            duration: "2 Months",
-            description: "Improved hydration and even skin tone"
-        },
-        {
-            id: 4,
-            before: "https://images.unsplash.com/photo-1595909315417-5a239d96a8f9?w=600&h=800&fit=crop",
-            after: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&h=800&fit=crop",
-            treatment: "Buccal Massage Series",
-            duration: "8 Weeks",
-            description: "Natural face lift effect with improved contours"
+            before: "/cmp3-1.jpg",
+            after: "/cmp3-2.jpg",
+            treatment: "Acne Clear Treatment",
+            duration: "3 Months",
+            description: "Significant reduction in acne and improved skin texture"
         }
     ];
 
@@ -64,7 +46,7 @@ const BeforeAfterSection = () => {
         setSliderPosition(50);
     };
 
-    const handleMouseMove = (e) => {
+    const handleMouseMove = (e: React.MouseEvent) => {
         if (!isDragging) return;
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.clientX - rect.left;
@@ -72,14 +54,14 @@ const BeforeAfterSection = () => {
         setSliderPosition(Math.min(Math.max(percentage, 0), 100));
     };
 
-    const handleTouchMove = (e) => {
+    const handleTouchMove = (e: React.TouchEvent) => {
         const rect = e.currentTarget.getBoundingClientRect();
         const x = e.touches[0].clientX - rect.left;
         const percentage = (x / rect.width) * 100;
         setSliderPosition(Math.min(Math.max(percentage, 0), 100));
     };
 
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: React.MouseEvent) => {
         setIsDragging(true);
         // Immediately update position on mousedown
         const rect = e.currentTarget.getBoundingClientRect();
@@ -101,7 +83,7 @@ const BeforeAfterSection = () => {
 
     return (
         <>
-            <Background/>
+
 
             <section className="py-20 px-8 bg-transparent" id="transformations">
 

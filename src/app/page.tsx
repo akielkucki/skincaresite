@@ -1,30 +1,27 @@
 import Hero from "@/components/hero";
 import StorySection from "@/components/story";
-import React, {ReactNode} from "react";
+import React from "react";
 import Services from "@/components/services";
 import Cta from "@/components/cta";
 import Footer from "@/components/footer";
-import AiChat from "@/components/aichat";
 import Contact from "@/components/contact";
 import BeforeAfterSection from "@/components/transformations";
-
-const Background = () => {
-    return (
-        <div
-            className="w-full absolute top-0 left-0 -z-10 h-[350vh] md:h-[200vh]"
-
-            style={{
-                background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #FFF7D6 100%)',
-            }}
-        ></div>
-    )
-}
 
 export default function Home() {
   return (
       <>
-          <Background />
-          <Hero/>
+          <div
+              className="w-full absolute top-0 left-0 min-h-[120vh]"
+
+              style={{
+                  background: 'radial-gradient(ellipse 140% 80% at 50% 0%, #fcd34d 0%, #fde68a 15%, #fed7aa 35%, #fecaca 55%, #fef3c7 75%, #FFF1F2 100%)',
+              }}
+          ></div>
+          <div
+              className="min-h-screen w-full bg-[radial-gradient(ellipse_100%_100%_at_50%_50%,theme(colors.pink.50)_0%,theme(colors.rose.50)_50%,theme(colors.stone.50)_100%)]"
+          >
+
+              <Hero/>
           <StorySection/>
           <BeforeAfterSection/>
           <Services/>
@@ -34,6 +31,7 @@ export default function Home() {
           <Contact/>
 
           <Footer/>
+          </div>
           {/*<AiChat/>*/}
 
       </>

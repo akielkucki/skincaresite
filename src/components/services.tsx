@@ -238,7 +238,7 @@ const ServiceCard = ({ service }: {service: Service}) => {
 
 const ServicesSection = () => {
     return (
-        <section className="bg-[radial-gradient(circle_at_center,_#fb923c2a_0%,_#FFF7D6_75%)] py-16 px-8">
+        <section className=" py-16 px-8">
             <div className="container mx-auto ">
                 <div className="text-center mb-12">
                     <h2 className="text-5xl font-serif text-gray-900 mb-4">Our Services</h2>

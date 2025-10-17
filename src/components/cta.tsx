@@ -2,7 +2,7 @@ import React from 'react';
 
 const CTASection = () => {
     return (
-        <section className="relative py-24 px-8 overflow-hidden">
+        <section className="relative py-24 px-8 overflow-hidden z-20">
             {/* Background with gradient */}
             <div
                 className="absolute inset-0 -z-10"

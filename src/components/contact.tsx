@@ -75,7 +75,7 @@ const ContactForm = () => {
         return () => clearInterval(intv)
     },[])
     return (
-        <section className="py-20 px-8 bg-gradient-to-br bg-[radial-gradient(circle_at_center,_#fb923c2a_0%,_#FFF7D6_75%)]" id={"contact"}>
+        <section className="py-20 px-8" id={"contact"}>
             <div className="container mx-auto max-w-7xl">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                     {/* Left Content */}
